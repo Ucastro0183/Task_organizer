@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ulises Castro">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <!-- Bootstrap CSS -->
+    <Link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Custom Style Sheet-->
+    <link rel="stylesheet" href="files/custom.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Custom script for handlers -->
+    <script src="files/script.js"></script>
+
+</head>
+<body onload="getTask()">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Task Organizer</a>            
+            <div class="navbar-right">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="addTask.html">Add Task</a>
+                    </li>
+                </ul>            
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+    <h2>Edit Task</h2>
+    
+    <form id="edit-task-form" action="index.html">
+        <div class="mb-3">
+            <label for="TaskItem" class="form-label">Task Description</label>
+            <input type="text" class="form-control" id="TaskItem">
+        </div>
+        <div class="mb-3">
+            <label for="TaskDate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="TaskDate">
+        </div>
+        <div class="mb-3">
+            <label for="TaskTime" class="form-label">Time</label>
+            <input type="time" class="form-control" id="TaskTime">
+        </div>
+        <div class="mb-3">
+            <label for="TaskPriority" class="form-label">Priority</label>
+            <Select type="text" class="form-control" id="TaskPriority">
+                <option value="Low">Low</option>
+                <option value="Normal" selected>Normal</option>
+                <option value="High">High</option>
+            </Select>
+        </div>
+        <input type="hidden" id="taskID" value="">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    </main><!-- /.container -->
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
